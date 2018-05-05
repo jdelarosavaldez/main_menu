@@ -3,14 +3,21 @@ import time
 import page
 from selenium import webdriver
 
-objetos = ['INICIO', 'PORTAFOLIO','CONÓCENOS', 'EMPLEOS','BLOG']
+elements = ['INICIO', 'PORTAFOLIO','CONÓCENOS', 'EMPLEOS','BLOG']
+links = [
+'http://gbh.com.do/',
+'http://gbh.com.do/portafolio/',
+'http://gbh.com.do/soluciones-gbh/',
+'http://gbh.com.do/empleos/'
+'http://gbh.com.do/noticias-de-tecnologia/' ]
+
 
 class mainMenu(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        # cls.driver = webdriver.Firefox()
-        cls.driver = webdriver.Chrome('chromedriver')
+        cls.driver = webdriver.Firefox()
+        #cls.driver = webdriver.Chrome('chromedriver')
         cls.driver.get("http://www.gbh.com.do")
         cls.main_page = page.HomePage(cls.driver)
         time.sleep(5)
@@ -28,18 +35,23 @@ class mainMenu(unittest.TestCase):
         is_404 = 'error404'
         self.assertTrue(is_404 not in self.driver.page_source, "Logo Link getting 404 page")
 
-    def test_menu_objects(self):
-        """ Homepage - Menu Objects, Verifying The Elements/items without custom are correct"""
-        menu_objects = []
+    def test_menu_elements(self):
+        """ Homepage - Menu Elements, Verifying The Elements/items without custom are corret"""
+        menu_elements = []
         items = self.main_page.get_main_menu_elements()
         for i in range(0, len(items)):
             if 'menu-item-object-page' in items[i].get_attribute('class'):  # menu-item-object-page
-                menu_objects.append(items[i].text)
-        self.assertEqual(menu_objects, objetos,'The Menu Objects are corrects')
+                menu_elements.append(items[i].text)
+        self.assertEqual(menu_elements, elements,'The Menu Elements are corrects')
 
 
-    def test_menu_objects_link(self):
-        pass
+    def test_menu_objects_links(self):
+        menu_links = []
+        items = self.main_page.get_main_menu_elements()
+        for i in range(0, len(items)):
+            if 'menu-item-object-page' in items[i].get_attribute('class'):  # menu-item-object-page
+                link.append(items[i].find_element_by_tag_name('a').get_attribute('href'))
+        self.assertEqual(links, )
 
     def test_menu_objects_redirect(self):
         pass
