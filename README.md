@@ -2,10 +2,12 @@
 Test Cases for the Main Menu
 ---
 ### Pre-requisites
-* Git 
+* FireFox v.59.0.2 
+* git 
 * Python 3.5
 * pip
 * virtualenv
+
 
 ###Installing modules
 
@@ -13,5 +15,5 @@ Once you have Python and pip installed just run ``` pip install -r requirements.
 
 
 ###Run automated test localy
-
+	
 
