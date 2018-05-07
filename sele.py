@@ -11,12 +11,13 @@ driver = webdriver.Firefox()
 driver.get("https://www.gbh.com.do/")
 time.sleep(5)
 
-menu_items = driver.find_element_by_id('menu-main-menu')
-items = menu_items.find_elements_by_class_name('menu-item')
+# menu_items = driver.find_element_by_id('menu-main-menu')
+# items = menu_items.find_elements_by_class_name('menu-item')
+items = self.driver.find_elements_by_css_selector('#menu-main-menu .menu-item.nav-servicios')
 # print(items, len(items))
 for i in range(0,len(items)):
-    if 'menu-item-object-servicio' in items[i].get_attribute('class'):
-        print(items[i].text)
+    # if 'menu-item-object-servicio' in items[i].get_attribute('class'):
+    print(items[i].text)
 
 
 

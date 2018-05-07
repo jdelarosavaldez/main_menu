@@ -95,10 +95,9 @@ class mainMenu(unittest.TestCase):
 
     def test_sub_menu_objects(self):
         """ Homepage - Sub Menu Elements, Verifying The Sub Elements/items with custom are complete or corret"""
-        items = self.main_page.get_main_menu_elements()
+        items = self.main_page.get_services_items()
         for i in range(0,len(items)):
-            if 'menu-item-object-servicio' in items[i].get_attribute('class'):
-                self.assertTrue(items[i].text in v.sub_elements, "The {} is not in the SubMenu/Service".format(items[i].text))
+            self.assertTrue(items[i].text in v.sub_elements, "The {} is not in the SubMenu/Service".format(items[i].text))
 
             
 

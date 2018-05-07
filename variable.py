@@ -25,6 +25,9 @@ html_class = [
 ]
 
 sub_elements = [
+'SERVICIOS',
+'DESARROLLO',
+'SOPORTE',
 'Asesoría de interfaz y experiencia de usuario (UI/UX)',
 'Consultoría Web'
 'Desarrollo de software'

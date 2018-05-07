@@ -24,3 +24,7 @@ class HomePage(BasePage):
         main_menu = self.driver.find_element(*HomePageLocators.MAIN_MENU)
         items = main_menu.find_elements(*HomePageLocators.MAIN_MENU_ITEMS)
         return items
+
+    def get_services_items(self):
+        items = self.driver.find_elements(*HomePageLocators.SERVICES_ITEMS)
+        return items
