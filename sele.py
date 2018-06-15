@@ -8,7 +8,7 @@ import requests
 
 # driver = webdriver.Chrome('chromedriver')
 driver = webdriver.Firefox()
-driver.get("https://www.gbh.com.do/")
+driver.get("")
 time.sleep(5)
 
 # menu_items = driver.find_element_by_id('menu-main-menu')
