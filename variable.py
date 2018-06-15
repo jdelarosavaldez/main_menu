@@ -5,17 +5,10 @@ elements = [
 'EMPLEOS',
 'BLOG']
 
-links = [
-    'http://gbh.com.do/',
-    'http://gbh.com.do/portafolio/',
-    'http://gbh.com.do/soluciones-gbh/',
-    'http://gbh.com.do/empleos/',
-    'http://gbh.com.do/noticias-de-tecnologia/']
+links = []
 
 
-url = [
-"http://www.gbh.com.do",
-]
+url = []
 
 html_class = [
 'menu-item-object-page',
